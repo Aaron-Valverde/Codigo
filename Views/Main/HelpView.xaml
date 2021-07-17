@@ -1,0 +1,75 @@
+﻿<Page x:Class="livelywpf.Views.HelpView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:livelywpf.Views"
+      xmlns:p = "clr-namespace:livelywpf.Properties"  
+      xmlns:ui="http://schemas.modernwpf.com/2019" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="{x:Static p:Resources.TitleHelp}">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <StackPanel>
+                    <TextBlock Text="{x:Static p:Resources.TitleHelp}" FontWeight="Bold" Margin="10, 10, 0, 0"/>
+                    <Image Source="pack://application:,,,/Resources/icons8-helping-hand-96.png" Width="96" Height="96" Margin="10, 15, 0, 0" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel Margin="10, 10, 0, 0">
+                    <TextBlock FontSize="15" Text="{x:Static p:Resources.TextWebsite}" />
+                    <TextBlock>           
+                    <Hyperlink Foreground="{DynamicResource SystemControlHighlightAltListAccentHighBrush}" NavigateUri="https://rocksdanister.github.io/lively/" RequestNavigate="Hyperlink_RequestNavigate">
+                        https://rocksdanister.github.io/lively/
+                    </Hyperlink>
+                    </TextBlock>
+
+                    <TextBlock FontSize="15" Text="{x:Static p:Resources.TitleDocumentation}" Margin="0, 10, 0, 0"/>
+                    <TextBlock>           
+                    <Hyperlink Foreground="{DynamicResource SystemControlHighlightAltListAccentHighBrush}" NavigateUri="https://github.com/rocksdanister/lively/wiki" RequestNavigate="Hyperlink_RequestNavigate">
+                        https://github.com/rocksdanister/lively/wiki
+                    </Hyperlink>
+                    </TextBlock>
+
+                    <TextBlock FontSize="15" Text="{x:Static p:Resources.TitleCommunity}" Margin="0, 10, 0, 0"/>
+                    <TextBlock ToolTip="https://www.reddit.com/r/LivelyWallpaper/">           
+                    <Hyperlink Foreground="{DynamicResource SystemControlHighlightAltListAccentHighBrush}" NavigateUri="https://www.reddit.com/r/LivelyWallpaper/" RequestNavigate="Hyperlink_RequestNavigate">
+                        Reddit
+                    </Hyperlink>
+                    </TextBlock>
+                    <!--"
+                    <TextBlock ToolTip="https://discord.gg/TwwtBCm">           
+                    <Hyperlink Foreground="Gray" NavigateUri="https://discord.gg/TwwtBCm" RequestNavigate="Hyperlink_RequestNavigate">
+                        Discord
+                    </Hyperlink>
+                    </TextBlock>
+                    -->
+                    <TextBlock ToolTip="https://www.deviantart.com/livelywallpaper/gallery/">           
+                    <Hyperlink Foreground="{DynamicResource SystemControlHighlightAltListAccentHighBrush}" NavigateUri="https://www.deviantart.com/livelywallpaper/gallery/" RequestNavigate="Hyperlink_RequestNavigate">
+                        DeviantArt
+                    </Hyperlink>
+                    </TextBlock>
+
+                    <TextBlock FontSize="15" Text="{x:Static p:Resources.TitleSourceCode}" Margin="0, 10, 0, 0"/>
+                    <TextBlock>           
+                    <Hyperlink ToolTip="https://github.com/rocksdanister/lively/" Foreground="{DynamicResource SystemControlHighlightAltListAccentHighBrush}" NavigateUri="https://github.com/rocksdanister/lively/" RequestNavigate="Hyperlink_RequestNavigate">
+                        <TextBlock Text="{x:Static p:Resources.TextGitHubStar}"/>
+                    </Hyperlink>
+                    </TextBlock>
+
+                    <StackPanel x:Name="storePanel">
+                        <TextBlock FontSize="15" Text="{x:Static p:Resources.TitleStore}" Margin="0, 10, 0, 0"/>
+                        <TextBlock ToolTip="Windows Store">          
+                            <Hyperlink Foreground="{DynamicResource SystemControlHighlightAltListAccentHighBrush}" NavigateUri="ms-windows-store://review/?ProductId=9NTM2QC6QWS7" RequestNavigate="Hyperlink_RequestNavigate">
+                                <TextBlock Text="{x:Static p:Resources.TextStoreReview}"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
